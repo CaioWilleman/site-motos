@@ -1,0 +1,262 @@
+/* ── RESET & BASE ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --laranja: #FF6B00;
+    --fundo: #111111;
+    --fundo-card: #1A1A1A;
+    --fundo-secao: #161616;
+    --texto: #F0F0F0;
+    --texto-fraco: #888888;
+    --borda: #2A2A2A;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.destaque {
+    color: var(--laranja);
+}
+
+/* ── BOTÕES ── */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn--laranja {
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+/* ── HEADER ── */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid var(--borda);
+    padding: 16px 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: var(--texto);
+}
+
+.header__nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header__nav a {
+    color: var(--texto-fraco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.header__nav a:hover {
+    color: var(--laranja);
+}
+
+/* ── HERO ── */
+.hero {
+    padding: 100px 0;
+    background: radial-gradient(ellipse at top left, #2a1500 0%, var(--fundo) 60%);
+}
+
+.hero__inner {
+    max-width: 650px;
+}
+
+.hero__titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero__subtitulo {
+    color: var(--texto-fraco);
+    font-size: 1.1rem;
+    margin-bottom: 36px;
+    max-width: 500px;
+}
+
+/* ── SEÇÃO TÍTULO ── */
+.secao__titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: var(--texto);
+}
+
+/* ── CATÁLOGO ── */
+.catalogo {
+    padding: 80px 0;
+    background-color: var(--fundo-secao);
+}
+
+.catalogo__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* ── CARD ── */
+.card {
+    background-color: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--laranja);
+}
+
+.card__foto {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card__corpo {
+    padding: 20px;
+}
+
+.card__nome {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.card__info {
+    color: var(--texto-fraco);
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+}
+
+.card__preco {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--laranja);
+    margin-bottom: 18px;
+}
+
+.card__btn {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    background-color: var(--laranja);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.card__btn:hover {
+    opacity: 0.85;
+}
+
+/* ── VENDA ── */
+.venda {
+    padding: 80px 0;
+    background-color: var(--fundo);
+}
+
+.venda__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.venda__inner p {
+    color: var(--texto-fraco);
+    font-size: 1.05rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--borda);
+    background-color: #0d0d0d;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer__inner p {
+    color: var(--texto-fraco);
+    font-size: 0.85rem;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+    .header__nav {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

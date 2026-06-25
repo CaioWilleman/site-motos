@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Honda CB 500F",
+    "ano": 2021,
+    "preco": 28500,
+    "km": 12000,
+    "foto": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
+  },
+  {
+    "id": 2,
+    "nome": "Yamaha MT-07",
+    "ano": 2020,
+    "preco": 45000,
+    "km": 18000,
+    "foto": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600"
+  },
+  {
+    "id": 3,
+    "nome": "Kawasaki Z400",
+    "ano": 2022,
+    "preco": 32000,
+    "km": 5000,
+    "foto": "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=600"
+  }
+]
